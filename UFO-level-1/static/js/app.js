@@ -1,8 +1,6 @@
 // from data.js
 var tableData = data;
 
-// Console.log the data from data.js
-console.log(data);
 
 // Get a reference to the table body
 var tbody = d3.select("tbody");
@@ -38,17 +36,13 @@ function runEnter() {
   d3.event.preventDefault();
   
   // Select the input element and get the raw HTML node
-  var inputElement = d3.select("#datetime");
+  var inputElement = d3.select("#date");
 
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
 
-  console.log(inputValue);
-  console.log(UFOList);
-
+  
   var filteredData = UFOList.filter(list => list.datetime === inputValue);
-
-  console.log(filteredData);
 
   tbody.html("");
 
